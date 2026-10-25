@@ -1,0 +1,46 @@
+:root { --plum:#3B1F2B; --plum-dark:#26131C; --taupe:#B6A597; --taupe-dark:#8A776C; --cream:#F4EEE5; --paper:#FBF8F1; --ink:#2F1C24; --slate:#5A4B4A; --coral:#7A3344; --coral-dark:#5B202F; --peach:#D8C3A5; --mint:#E4D3AE; --gold:#C8A96B; --gold-soft:#E7D7B5; --muted:#75665F; --line:#D9CEC1; --shadow:0 10px 30px rgba(59,31,43,.12); --display:'Cinzel',Georgia,serif; --wordmark:'Cinzel',Georgia,serif; --body:'Tenor Sans',Arial,sans-serif; --subtitle:'Tenor Sans',Arial,sans-serif; --script:'Caveat',cursive; --logo-brown:#6A2716; --logo-brown-light:#8C4A31; --logo-brown-dark:#45150B; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; min-width:320px; background:var(--cream); color:var(--ink); font-family:var(--body); }
+button, input, textarea, select { font:inherit; }
+button { border:0; cursor:pointer; }
+button:disabled { opacity:.5; cursor:not-allowed; }
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; display:block; }
+.container { width:min(1180px, calc(100% - 48px)); margin:0 auto; }
+.display { font-family:var(--display); }
+.wordmark { font-family:var(--wordmark); text-transform:uppercase; letter-spacing:.12em; }
+.eyebrow { color:var(--coral); font-size:11px; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+.page { min-height:100vh; }
+.page-section { padding:72px 0; }
+.section-heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:28px; }
+.section-heading h2 { margin:8px 0 0; font:clamp(32px,5vw,56px)/1 var(--display); }
+.muted { color:var(--muted); }
+.button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:42px; padding:0 20px; border-radius:999px; font-weight:600; transition:transform .2s, box-shadow .2s, background .2s; }
+.button:hover:not(:disabled) { transform:translateY(-2px); }
+.button.primary { background:var(--coral); color:var(--paper); box-shadow:0 0 0 3px var(--cream), 0 0 0 5px var(--coral); }
+.button.primary:hover:not(:disabled) { background:var(--coral-dark); box-shadow:0 0 0 3px var(--cream), 0 0 0 6px var(--coral); }
+.button.dark { background:var(--plum); color:var(--paper); box-shadow:0 8px 20px rgba(59,31,43,.24); }
+.button.light { background:var(--paper); border:1px solid var(--line); }
+.button.small { min-height:34px; padding:0 14px; font-size:12px; }
+.card { background:var(--paper); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); }
+.grid { display:grid; gap:20px; }
+.painting-grid { grid-template-columns:repeat(4, 1fr); }
+.form-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; }
+.field { display:flex; flex-direction:column; gap:7px; }
+.field label { font-size:13px; font-weight:600; }
+.field input, .field textarea, .field select { width:100%; border:1px solid var(--line); border-radius:12px; padding:12px 14px; background:var(--paper); color:var(--ink); outline:none; }
+.field textarea { min-height:110px; resize:vertical; }
+.field input:focus, .field textarea:focus, .field select:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(200,169,107,.2); }
+.field small { color:var(--muted); font-size:11px; }
+.field-error { color:var(--coral-dark); font-size:12px; }
+.actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.state-card { padding:36px; text-align:center; }
+.state-card h3 { margin:0 0 8px; font:28px var(--display); }
+.status-chip { display:inline-flex; border-radius:999px; padding:5px 10px; font-size:11px; font-weight:700; text-transform:capitalize; }
+.status-available, .status-placed, .status-confirmed, .status-accepted { background:var(--gold-soft); color:var(--plum-dark); }
+.status-requested { background:var(--taupe); color:var(--plum-dark); }
+.status-sold { background:var(--plum); color:var(--paper); }
+.status-declined, .status-cancelled { background:#E8E0D8; color:var(--taupe-dark); }
+@media (max-width:900px) { .painting-grid { grid-template-columns:repeat(3, 1fr); } }
+@media (max-width:650px) { .container { width:min(100% - 28px, 1180px); } .page-section { padding:48px 0; } .form-grid { grid-template-columns:1fr; } .painting-grid { grid-template-columns:repeat(2, 1fr); } .section-heading { align-items:start; flex-direction:column; } }
