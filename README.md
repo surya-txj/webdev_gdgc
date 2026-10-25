@@ -68,5 +68,4 @@ The palette uses deep Plum for trust and focus, warm Taupe for tactile materiali
 The home page opens with the paintings trailing in from the right, then settles into a looping right-to-left carousel on a curved 3D track (`CurvedMarquee` in `frontend/src/components/Visuals.jsx`). Cards in the middle are smaller and face forward; cards towards the edges grow, turn inward and lean slightly, as if wrapping around a cylinder. A hand-pointer cursor stays parked over the middle. `STUDIO_NAME` is one constant in `frontend/src/config.js` if the studio name needs to change.
 
 ## Author
-
 Suryatej Bandla
